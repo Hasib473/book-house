@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <div>
-            <div className="flex flex-col min-h-screen">
+            <div className="flex flex-col mt-5">
   <main className="flex-grow">
     {/* তোমার মূল কনটেন্ট */}
   </main>
@@ -12,13 +12,13 @@ const Footer = () => {
     <nav className="grid grid-flow-col gap-4">
       <a className="link link-hover">About us</a>
       <a className="link link-hover">Contact</a>
-      <a className="link link-hover">Jobs</a>
+      <a className="link link-hover">Books</a>
       <a className="link link-hover">Press kit</a>
     </nav>
     
     <aside>
       <p>
-        Copyright © {new Date().getFullYear()} - All right reserved by ACME
+        Copyright © {new Date().getFullYear()} - All right reserved by Book Vibe
         Industries Ltd
       </p>
     </aside>

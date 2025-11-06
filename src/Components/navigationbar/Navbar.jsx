@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router';
 
 const Navbar = () => {
     return (
@@ -12,23 +13,25 @@ const Navbar = () => {
       <ul
         tabIndex="-1"
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a>Home</a></li>
+        <li><NavLink to="/">Home</NavLink></li>
         <li>
-          <a>Listed Book</a>
-         
+          <NavLink to="/listed-books">Listed Book</NavLink>
         </li>
-        <li><a>Pages to Read</a></li>
+        <li><NavLink to="/pages-to-read">Pages to Read</NavLink></li>
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl font-bold">Book Vibe</a>
+    <a className="btn btn-ghost text-xl font-bold uppercase">Book <span className='text-green-400'>Vibe</span> </a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-      <li><a>Home</a></li>
+      <li><NavLink to="/" className={({isActive}) =>
+      isActive ? "border-2 border-green-400 rounded-sm text-green-500 font-semibold": "text-black"}>Home</NavLink></li>
       <li>
-        <a>Listed Book</a>
+        <NavLink to="/listed-books" className={({isActive}) =>
+        isActive ? "border-2 border-green-400 rounded-sm text-green-500 font-semibold": "text-black"}>Listed Book</NavLink>
       </li>
-      <li><a>Pages to Read</a></li>
+      <li><NavLink to="/pages-to-read" className={({isActive}) =>
+      isActive ? "border-2 border-green-400 rounded-sm text-green-500 font-semibold": "text-black"} >Pages to Read</NavLink></li>
     </ul>
   </div>
   <div className="navbar-end">
