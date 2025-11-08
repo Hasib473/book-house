@@ -2,11 +2,11 @@ import React from 'react';
 import { Link } from 'react-router';
 
 const Book = ({ book }) => {
-    const { bookName, author, rating, category,image,bookId } = book;
+    const { bookName, author, rating, category,image,bookId } = book || {};
     return (
        <Link to={`/bookDetails/${bookId}`}>
          <div>
-            <div className="card bg-base-100 w-96 shadow-sm border-1">
+            <div className="card bg-base-100 w-96 shadow-sm border">
   <figure>
     <img className='h-[166px] px-[80px] py-[10px] mt-5 bg-gray-300 rounded-xl'
       src={image}
